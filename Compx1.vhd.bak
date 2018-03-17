@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity Compx1 is port (
+   
+   Input_A	   :  in  std_logic;  
+   Input_B	   :  out std_logic;
+		
+); 
+
+end Compx1;
+
+architecture Behavioral of Compx1 is
+
+begin
+
+	
+	
+end architecture Behavioral; 

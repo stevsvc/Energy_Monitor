@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity Compx5 is port (
+   
+ Input_Avector :  in std_logic_vector (3 downto 0);
+ Input_Bvector :  in std_logic_vector (3 downto 0);
+		
+); 
+
+end Compx1;
+
+architecture Behavioral of Compx5 is
+
+
+  component Compx1 port (
+	Input_A	   :  in  std_logic;  
+   Input_B	   :  in std_logic;
+	Output_G		:  out std_logic;
+	Output_E		:  out std_logic;
+	Output_L		:  out std_logic
+   ); 
+   end component;
+	
+	  component Compx4 port (
+   Input_3G	   :  in std_logic;  
+   Input_3E    :  in std_logic;
+   Input_3L	   :  in std_logic;
+	Input_2G	   :  in std_logic;
+	Input_2E	   :  in std_logic;
+	Input_2L	   :  in std_logic;
+	Input_1G	   :  in std_logic;
+	Input_1E	   :  in std_logic;
+	Input_1L	   :  in std_logic;
+	Input_0G	   :  in std_logic;
+	Input_0E    :  in std_logic;
+	Input_0L	   :  in std_logic;
+	Output_G    :  out std_logic;
+	Output_E    :  out std_logic;
+	Output_L    :  out std_logic
+   ); 
+   end component;
+	
+	signal seg7_A	: std_logic;
+	
+begin
+
+	INST1: Compx1 port map (Input_Avector(3), Input_Bvector(3), ) 
+	
+end architecture Behavioral; 
